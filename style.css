@@ -1,4 +1,5 @@
 *{
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-size: medium;
@@ -6,6 +7,9 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+body{
+    background-color: #f4f2ee;
+}
 /* Header styles */
 
 #headerContainer > h1{
@@ -16,25 +20,105 @@
 }
 
 #headerContainer > small{
-    font-size: small;
+    font-size: medium;
     margin: 10px;
     font-weight: lighter;
     color: rgb(255, 255, 255)
 }
 #headerContainer{
-    margin: 30px;
-    padding: 20px;
-    box-shadow: 5px 3px rgb(86, 86, 86);
-    border-radius: 10px;
-    background-color: rgb(141, 3, 3);
+    margin: 0;
+    padding: 50px 20px;
+    border-radius: 0px;
+    background-color: #b01220;
     text-align: center;
 }
 
 #FormContainer{
     margin: 30px;
+    padding: 25px;
+    border: 2px solid #e2dfd9;
+    border-radius: 18px;
+    background-color: #FFFFFF;
+    text-align: left;
+}
+
+#listContainer{
+    margin: 30px;
     padding: 5px;
     box-shadow: 5px 3px rgb(86, 86, 86);
     border-radius: 10px;
-    background-color: #f5f3f0;
-    text-align: center;
+    background-color: #FFFFFF;
+    color: rgb(8, 8, 8);
+}
+
+#FormContainer > #studentForm > .input-field > label{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#FormContainer > #studentForm > .input-field > input{
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    border: 2px solid #e2dfd9;
+}
+
+button{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(141, 3, 3);
+    color: rgb(255, 255, 255);
+    font-size: medium;
+    font-weight: bold;
+    align-items: center; 
+    cursor: pointer;
+
+}
+
+#FormContainer > #studentForm:nth-last-child(1) > button{
+    color:#fff;
+    background-color: #c81e1e;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#listContainer > .list-item{
+   
+}
+
+#listContainer > .list-item > h2{
+    
+}
+
+#listContainer > .list-item > p{
+   
+}
+
+#listContainer > .list-item > button{
+   
+}
+
+#listContainer{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+@media (width <= 320px){
+    #listContainer > .list-item{
+        grid-column: span 12;
+    }
+}
+
+@media (width > 1000px){
+    #listContainer > .list-item{
+        grid-column: span 2;
+    }
+}
+
+@media (width > 320px) and (width <= 1000px){
+    #listContainer > .list-item{
+        grid-column: span 4;
+    }
 }
