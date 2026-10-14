@@ -17,6 +17,7 @@ body{
     font-weight: bold;
     padding: 10px;
     color: rgb(255, 255, 255);
+    padding: 50px;
 }
 
 #headerContainer > small{
